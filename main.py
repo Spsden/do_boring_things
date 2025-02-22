@@ -1,6 +1,13 @@
 import argparse
 from ffmpeg_utils import  ScreenRecorder
+from datetime import datetime
+from config import SCREEN_FPS
+import threading
 
+
+def generate_filename():
+    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    return f"recordings/screen_recording_{timestamp}.mp4"
 
 def main():
     parser = argparse.ArgumentParser(description="Desktop Recording CLI")
@@ -14,10 +21,15 @@ def main():
         print("Recording screen...")
         try:
             recorder = ScreenRecorder()
-            recorder.record_screen(
-                output_file="screen_recording.mp4",
-                fps=30
-            )
+            file_name = generate_filename()
+            print("Recording: "+ file_name)
+            recorder.record_screen("recordings/output2.mp4", SCREEN_FPS)
+
+
+
+            input("Press Enter to stop recording...\n")
+            recorder.stop_recording()
+
         except Exception as e:
             print(f"Recording failed: {str(e)}")
 

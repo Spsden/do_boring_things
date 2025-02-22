@@ -5,6 +5,9 @@ __pycache__/
 
 # Ignore virtual environments
 venv/
+.venv/
+BORE/
+.idea/
 env/
 
 # Ignore recordings folder

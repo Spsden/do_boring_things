@@ -3,4 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="Python 3.13 (do_boring_things)" />
   </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.11 (do_boring_things)" project-jdk-type="Python SDK" />
 </project>
