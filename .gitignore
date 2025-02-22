@@ -1,0 +1,16 @@
+# Ignore Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore virtual environments
+venv/
+env/
+
+# Ignore recordings folder
+recordings/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+/.idea/
